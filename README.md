@@ -29,7 +29,7 @@ But the functions you write here will do the logical work for the interface we'l
 
 ### Tasks
 
-* `isValidEmail` - returns `true` if the given string ends with `@codeimmersives.com` and has at leat one character before that, and `false` otherwise.
+* `isValidEmail` - returns `true` if the given string ends with `@codeimmersives.com` and has at least one character before that, and `false` otherwise.
 * `isValidPassword` - returns true if the given string is at least 8 characters with a lower case and upper case letter, and false otherwise. Do not use Regular Expressions (regex).
   * HINT: you can COMPARE an upper-cased version of your string to the current string. If they're different, then it has at least one lower-cased letter. You can also do the same to check for an upper-cased letter.
 * `isRegisteredUser` - returns true if the given string is identical to ONE of the strings held in the variables `user1`, `user2`, and `user3`. Returns false otherwise.

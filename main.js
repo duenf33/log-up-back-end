@@ -12,10 +12,64 @@ const password3 = 'like a BOSS';
 
 
 // **YOUR** code below. Pass those tests!
+// we are not able to use regex. no match() etc.
+function isValidEmail(user) {
+  let userLower = user.toLowerCase()
+  let userAtIndex = userLower.indexOf('@')
+  let userIndexNum = userLower.slice(userAtIndex, 34 )
+  let userSplit = userLower.split("@")
 
+  console.log(userLower)
+  console.log(userAtIndex);
+  console.log(userIndexNum)
+  console.log(userSplit)
+  
+  if(userIndexNum == "@codeimmersives.com" && userSplit.length >= 1) {
+    return console.log(true)
+  } else {
+    return console.log(false);
+  }
+}
+isValidEmail(user1);
+isValidEmail;
 
+function isValidPassword(password, letter) {
+  passLetter = password.charAt(letter);
+  console.log(passLetter)
+  console.log(password)
+  console.log(letter)
+  if(password.length >= 8) {
 
+    return true;
 
+  } else {
+    return false;
+  }
+
+}
+isValidPassword("fernando")
+
+function isRegisteredUser(regUser) {
+  if((regUser == user1) || (regUser == user2) || (regUser == user3)) {
+    return true
+
+  } else {
+    return false;
+  }
+}
+isRegisteredUser(user1)
+
+function passwordMatches(passMatch) {
+  pass1 = password1 && user1;
+  pass2 = password2 && user2;
+  pass3 = password3 && user3;
+  if((passMatch == pass1) || (passMatch == pass2) || (passMatch == pass3)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+passwordMatches(password1)
 
 
 // Our code below. Do not touch!
