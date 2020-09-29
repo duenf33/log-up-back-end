@@ -51,14 +51,16 @@ function isRegisteredUser(regUser) {
 
 function passwordMatches(passUs, passMa) {
 
-  passUser = user1 || user2 || user3;
-  passMatch = password1 || password2 || password3;
-  passUserMatch = passUser && passMatch;
-  pass1 = password1 && user1;
-  pass2 = password2 && user2;
-  pass3 = password3 && user3;
+  // passUser = user1 || user2 || user3;
+  // passMatch = password1 || password2 || password3;
+  // passUserMatch = passUser && passMatch;
+  // pass1 = password1 && user1;
+  // pass2 = password2 && user2;
+  // pass3 = password3 && user3;
 
-  return ((passUs == passUser) && (passMa == passMatch)) && ((passUs == user1) && (passMa == password1)) || ((passUs == user2) && (passMa == password2)) || (passUs == user3) && (passMa == password3);
+  return ((passUs == user1) && (passMa == password1)) || ((passUs == user2) && (passMa == password2)) || (passUs == user3) && (passMa == password3);
+
+  
 
   // if(((passUs == passUser) && (passMa == passMatch)) && ((passUs == user1) && (passMa == password1)) || ((passUs == user2) && (passMa == password2)) || (passUs == user3) && (passMa == password3)) {
   //   return true;
