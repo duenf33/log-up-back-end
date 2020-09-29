@@ -59,17 +59,19 @@ function isRegisteredUser(regUser) {
 }
 isRegisteredUser(user1)
 
-function passwordMatches(passMatch) {
+function passwordMatches(passUs, passMa) {
+  passUser = user1 || user2 || user3;
+  passMatch = password1 || password2 || password3;
   pass1 = password1 && user1;
   pass2 = password2 && user2;
   pass3 = password3 && user3;
-  if((passMatch == pass1) || (passMatch == pass2) || (passMatch == pass3)) {
+  if(((passUs && passMa) == (passUser && passMatch)) && (( passUs == passUser) || (pass2 == passUser) || (pass3 == passUser))) {
     return true;
   } else {
     return false;
   }
 }
-passwordMatches(password1)
+passwordMatches(user1, password1)
 
 
 // Our code below. Do not touch!
