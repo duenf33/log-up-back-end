@@ -20,11 +20,13 @@ function isValidEmail(user) {
   let userIndexNum = userLower.slice(userAtIndex, 34 )
   let userSplit = userLower.split("@")
 
-    if((userIndexNum == "@codeimmersives.com") && (userSplit[0].length >= 1)) {
-    return true;
-  } else {
-    return false;
-  }
+  return (userIndexNum == "@codeimmersives.com") && (userSplit[0].length >= 1);
+
+  //   if((userIndexNum == "@codeimmersives.com") && (userSplit[0].length >= 1)) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
 }
 
 function isValidPassword(password) {
@@ -38,11 +40,13 @@ function isValidPassword(password) {
 
 function isRegisteredUser(regUser) {
 
-  if((regUser == user1) || (regUser == user2) || (regUser == user3)) {
-    return true
-  } else {
-    return false;
-  }
+  return regUser == user1 || regUser == user2 || regUser == user3;
+
+  // if((regUser == user1) || (regUser == user2) || (regUser == user3)) {
+  //   return true
+  // } else {
+  //   return false;
+  // }
 }
 
 function passwordMatches(passUs, passMa) {
@@ -53,12 +57,14 @@ function passwordMatches(passUs, passMa) {
   pass1 = password1 && user1;
   pass2 = password2 && user2;
   pass3 = password3 && user3;
-  
-  if(((passUs == passUser) && (passMa == passMatch)) && ((passUs == user1) && (passMa == password1)) || ((passUs == user2) && (passMa == password2)) || (passUs == user3) && (passMa == password3)) {
-    return true;
-  } else {
-    return false;
-  }
+
+  return ((passUs == passUser) && (passMa == passMatch)) && ((passUs == user1) && (passMa == password1)) || ((passUs == user2) && (passMa == password2)) || (passUs == user3) && (passMa == password3);
+
+  // if(((passUs == passUser) && (passMa == passMatch)) && ((passUs == user1) && (passMa == password1)) || ((passUs == user2) && (passMa == password2)) || (passUs == user3) && (passMa == password3)) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
 }
 
 // Our code below. Do not touch!
