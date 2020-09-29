@@ -23,31 +23,26 @@ function isValidEmail(user) {
   console.log(userAtIndex);
   console.log(userIndexNum)
   console.log(userSplit)
+  console.log(userSplit[0].length)
   
-  if(userIndexNum == "@codeimmersives.com" && userSplit.length >= 1) {
-    return console.log(true)
+  if((userIndexNum == "@codeimmersives.com") && (userSplit[0].length >= 1)) {
+    return true;
   } else {
-    return console.log(false);
+    return false;
   }
 }
 isValidEmail(user1);
 isValidEmail;
 
-function isValidPassword(password, letter) {
-  passLetter = password.charAt(letter);
-  console.log(passLetter)
+function isValidPassword(password) {
   console.log(password)
-  console.log(letter)
-  if(password.length >= 8) {
-
+  if((password.length >= 8) && (password.toLowerCase() !== password) && (password.toUpperCase() !== password)) {
     return true;
-
   } else {
     return false;
   }
-
 }
-isValidPassword("fernando")
+isValidPassword("ferNanDo")
 
 function isRegisteredUser(regUser) {
   if((regUser == user1) || (regUser == user2) || (regUser == user3)) {
@@ -62,10 +57,11 @@ isRegisteredUser(user1)
 function passwordMatches(passUs, passMa) {
   passUser = user1 || user2 || user3;
   passMatch = password1 || password2 || password3;
+  passUserMatch = passUser && passMatch;
   pass1 = password1 && user1;
   pass2 = password2 && user2;
   pass3 = password3 && user3;
-  if(((passUs && passMa) == (passUser && passMatch)) && (( passUs == passUser) || (pass2 == passUser) || (pass3 == passUser))) {
+  if(((passUs == passUser) && (passMa == passMatch)) && ((passUs == user1) && (passMa == password1)) || ((passUs == user2) && (passMa == password2)) || (passUs == user3) && (passMa == password3)) {
     return true;
   } else {
     return false;
