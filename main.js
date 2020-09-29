@@ -14,61 +14,52 @@ const password3 = 'like a BOSS';
 // **YOUR** code below. Pass those tests!
 // we are not able to use regex. no match() etc.
 function isValidEmail(user) {
+
   let userLower = user.toLowerCase()
   let userAtIndex = userLower.indexOf('@')
   let userIndexNum = userLower.slice(userAtIndex, 34 )
   let userSplit = userLower.split("@")
 
-  console.log(userLower)
-  console.log(userAtIndex);
-  console.log(userIndexNum)
-  console.log(userSplit)
-  console.log(userSplit[0].length)
-  
-  if((userIndexNum == "@codeimmersives.com") && (userSplit[0].length >= 1)) {
+    if((userIndexNum == "@codeimmersives.com") && (userSplit[0].length >= 1)) {
     return true;
   } else {
     return false;
   }
 }
-isValidEmail(user1);
-isValidEmail;
 
 function isValidPassword(password) {
-  console.log(password)
+
   if((password.length >= 8) && (password.toLowerCase() !== password) && (password.toUpperCase() !== password)) {
     return true;
   } else {
     return false;
   }
 }
-isValidPassword("ferNanDo")
 
 function isRegisteredUser(regUser) {
+
   if((regUser == user1) || (regUser == user2) || (regUser == user3)) {
     return true
-
   } else {
     return false;
   }
 }
-isRegisteredUser(user1)
 
 function passwordMatches(passUs, passMa) {
+
   passUser = user1 || user2 || user3;
   passMatch = password1 || password2 || password3;
   passUserMatch = passUser && passMatch;
   pass1 = password1 && user1;
   pass2 = password2 && user2;
   pass3 = password3 && user3;
+  
   if(((passUs == passUser) && (passMa == passMatch)) && ((passUs == user1) && (passMa == password1)) || ((passUs == user2) && (passMa == password2)) || (passUs == user3) && (passMa == password3)) {
     return true;
   } else {
     return false;
   }
 }
-passwordMatches(user1, password1)
-
 
 // Our code below. Do not touch!
 
